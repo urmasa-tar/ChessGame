@@ -32,12 +32,17 @@ namespace ChessGame
 
                     left += 60;
                     P[i, j].Name = i + " " + j;
-                    /* if (i < (n / 2) - 1 && P[i, j].BackColor == Color.Black) { }
-                    else if (i > (n / 2) && P[i, j].BackColor == Color.Black) { }
+                    if (i < ((n / 2) - 1) && P[i, j].BackColor == Color.Black)
                     {
-                        P[i, j].Image = Properties.Resources.g;
-                        P[i, j].Name += " g";
-                    }*/
+                        P[i, j].Image = Properties.Resources.bhourse;
+                        P[i, j].Name += " bhourse";
+                    }
+                    else if (i > (n / 2) && P[i, j].BackColor == Color.Black)
+                    {
+                        P[i, j].Image = Properties.Resources.horse4;
+                        P[i, j].Name += " hourse04";
+                    }
+                    P[i, j].SizeMode = PictureBoxSizeMode.CenterImage;
                     mainPanel.Controls.Add(P[i, j]);
                 }
 
