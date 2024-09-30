@@ -28,31 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            mainPanel = new Panel();
             SuspendLayout();
             // 
-            // panel1
+            // mainPanel
             // 
-            panel1.BackColor = SystemColors.ControlDarkDark;
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(484, 484);
-            panel1.TabIndex = 0;
+            mainPanel.BackColor = SystemColors.ButtonFace;
+            mainPanel.Location = new Point(12, 12);
+            mainPanel.Name = "mainPanel";
+            mainPanel.Size = new Size(484, 484);
+            mainPanel.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Desktop;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1041, 597);
-            Controls.Add(panel1);
+            Controls.Add(mainPanel);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Form1";
+            ShowIcon = false;
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel mainPanel;
     }
 }
